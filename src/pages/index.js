@@ -1,18 +1,11 @@
-import styles from './index.css';
-import { formatMessage } from 'umi-plugin-locale';
+import React from 'react';
 
-export default function() {
-  return (
-    <div className={styles.normal}>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
-        <li>
-          <a href="https://umijs.org/guide/getting-started.html">
-            {formatMessage({ id: 'index.start' })}
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
-}
+export default () => (
+  <p style={{ textAlign: 'center' }}>
+    想要添加更多页面？请参考{' '}
+    <a href="https://umijs.org/guide/block.html" target="_blank" rel="noopener noreferrer">
+      umi 区块
+    </a>
+    。
+  </p>
+);

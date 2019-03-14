@@ -1,7 +1,7 @@
 
 // ref: https://umijs.org/config/
-export default {
-  treeShaking: true,
+import webpackConfig from './webpack.config'
+const config = Object.assign({}, webpackConfig, {
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
@@ -9,7 +9,10 @@ export default {
       dva: true,
       dynamicImport: { webpackChunkName: true },
       title: 'blog-admin',
-      dll: true,
+      // bug：忽略 reset-css 才可以正常使用 global.less
+      dll: {
+        exclude: ['reset-css']
+      },
       locale: {
         enable: true,
         default: 'en-US',
@@ -25,4 +28,5 @@ export default {
       },
     }],
   ],
-}
+})
+export default config
