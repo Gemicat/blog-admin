@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import { Form, Icon, Input, Button } from 'antd';
 import Axios from 'axios';
 
-class LoginPage extends Component {
+class SignInPage extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (err) return false
       console.log('Received values of form: ', values);
-      Axios.post('/api/user/login', values)
+      Axios.post('/api/user/signIn', values)
     });
   }
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form">
+      <Form onSubmit={this.handleSubmit}>
         <Form.Item label="用户名">
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: 'Please input your username!' }],
@@ -30,7 +30,7 @@ class LoginPage extends Component {
           )}
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit" className="login-form-button">
+          <Button type="primary" htmlType="submit">
             Log in
           </Button>
         </Form.Item>
@@ -39,4 +39,4 @@ class LoginPage extends Component {
   }
 }
 
-export default Form.create({ name: 'user-login' })(LoginPage)
+export default Form.create({ name: 'user-signin' })(SignInPage)
