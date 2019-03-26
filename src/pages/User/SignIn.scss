@@ -1,0 +1,11 @@
+.login_button {
+  width: 100%;
+}
+
+.signin {
+  :global {
+    .ant-form-item {
+      margin: 0 2px 24px;
+    }
+  }
+}

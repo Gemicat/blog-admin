@@ -1,0 +1,35 @@
+.container {
+  height: 100vh;
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg');
+  background-repeat: no-repeat;
+  background-position: center 110px;
+  background-size: 100%;
+  background-color: #f0f2f5;
+
+  :global {
+    .ant-layout {
+      background: transparent;
+    }
+  }
+}
+
+.top {
+  margin: 80px 0;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+}
+
+.logo {
+  height: 44px;
+  margin-right: 16px;
+  vertical-align: top;
+}
+
+.title {
+  position: relative;
+  top: 2px;
+  font-weight: 600;
+  font-size: 33px;
+  font-family: Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
