@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, message } from 'antd';
 import Axios from 'axios';
-import styles from './SignIn.scss'
 
-class SignInPage extends Component {
+const styles =  require('./SignIn.scss')
+
+interface SignInState {
+  size: string
+}
+
+interface SignInProps {
+  form: {
+    validateFields: Function,
+    getFieldDecorator: Function
+  }
+}
+
+class SignInPage extends Component<SignInProps, SignInState> {
   state = {
     size: 'large'
   }

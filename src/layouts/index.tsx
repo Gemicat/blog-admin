@@ -1,5 +1,5 @@
 import UserLayout from './UserLaylout'
-import styles from './index.scss';
+const styles =  require('./index.scss')
 
 function BasicLayout(props) {
   // 用户登录相关页面不需要全局 layout

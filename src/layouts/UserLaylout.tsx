@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Layout, Row, Col } from 'antd'
-import styles from './UserLaylout.scss'
-import logo from '@/assets/images/logo.jpeg'
+
+const styles = require('./UserLaylout.scss')
+const logo = require('@/assets/images/logo.jpeg')
 
 const { Content } = Layout
 class UserLayout extends Component {
