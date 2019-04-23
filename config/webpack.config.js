@@ -1,3 +1,5 @@
+import webpackPlugin from './plugin.config';
+
 const config = {
   treeShaking: false,
   sass: {},
@@ -9,7 +11,8 @@ const config = {
         "^/api": "/api"
       }
     }
-  }
+  },
+  chainWebpack: webpackPlugin
 }
 
 export default config

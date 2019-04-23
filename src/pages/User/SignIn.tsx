@@ -1,8 +1,14 @@
+/**
+ * title: 登录
+ */
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, message } from 'antd';
 import Axios from 'axios';
+import request from '@/utils/request'
 
 const styles =  require('./SignIn.scss')
+
+console.log(request)
 
 interface SignInState {
   size: string
